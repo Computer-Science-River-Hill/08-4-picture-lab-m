@@ -1,0 +1,38 @@
+{
+	"name": "McKibben - Default Graphical",
+	"features": {
+		"ghcr.io/devcontainers/features/desktop-lite:1": {},
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installGradle": "true"
+		}
+	},
+	"containerEnv": {
+		"DISPLAY": "" // Allow the Dev Containers extension to set DISPLAY, post-create.sh will add it back in ~/.bashrc and ~/.zshrc if not set.
+	},
+	"overrideCommand": false,
+	"privileged": true,
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"resmon.show.battery": false,
+				"resmon.show.cpufreq": false
+			},
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"streetsidesoftware.code-spell-checker"
+			]
+		}
+	},
+	"forwardPorts": [6080, 5901],
+	"portsAttributes": {
+		"6080": {
+			"label": "VNC web client (noVNC)",
+			"onAutoForward": "silent"
+		},
+		"5901": {
+			"label": "VNC TCP port",
+			"onAutoForward": "silent"
+		}
+	}
+}
