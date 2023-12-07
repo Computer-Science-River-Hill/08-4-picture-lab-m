@@ -18,5 +18,5 @@ ENV DBUS_SESSION_BUS_ADDRESS="autolaunch:" \
     DISPLAY=":0" \
     LANG="en_US.UTF-8" \
     LANGUAGE="en_US.UTF-8"
-ENTRYPOINT ["/usr/local/share/desktop-init.sh"]
+ENTRYPOINT ["/tmp/library-scripts/desktop-lite-debian.sh"]
 CMD ["sleep", "infinity"]

@@ -250,7 +250,7 @@ mkdir -p /var/run/dbus /usr/local/etc/vscode-dev-containers/
 # Script to change resolution of desktop
 cat << EOF > /usr/local/bin/set-resolution
 #!/bin/bash
-RESOLUTION=\${1:-\${VNC_RESOLUTION:-1920x1080}}
+RESOLUTION=\${1:-\${VNC_RESOLUTION:-1440x768x24}}
 DPI=\${2:-\${VNC_DPI:-96}}
 IGNORE_ERROR=\${3:-"false"}
 if [ -z "\$1" ]; then
