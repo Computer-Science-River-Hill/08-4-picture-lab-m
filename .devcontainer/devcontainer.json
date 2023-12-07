@@ -1,11 +1,7 @@
 {
 	"name": "McKibben - Default Graphical",
 	"features": {
-		"ghcr.io/devcontainers/features/desktop-lite:1": {},
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
-			"installGradle": "true"
-		}
+		"ghcr.io/devcontainers/features/desktop-lite:1": {}
 	},
 	"containerEnv": {
 		"DISPLAY": "" // Allow the Dev Containers extension to set DISPLAY, post-create.sh will add it back in ~/.bashrc and ~/.zshrc if not set.
@@ -21,7 +17,6 @@
 			"extensions": [
 				"vscjava.vscode-java-pack",
 				"streetsidesoftware.code-spell-checker",
-				"ms-azuretools.vscode-docker",
 				"MS-vsliveshare.vsliveshare"
 			]
 		}
