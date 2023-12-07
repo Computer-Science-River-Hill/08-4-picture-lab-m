@@ -20,7 +20,8 @@
 			},
 			"extensions": [
 				"vscjava.vscode-java-pack",
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},
