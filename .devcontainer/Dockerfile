@@ -1,5 +1,4 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
-COPY fluxbox/* /tmp/fluxbox/
 COPY *.sh /tmp/scripts/
 RUN bash /tmp/scripts/install.sh \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/scripts/ /tmp/fluxbox/ \
