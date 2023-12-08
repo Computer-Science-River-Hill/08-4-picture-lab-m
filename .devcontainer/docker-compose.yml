@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  desktop:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces:cached      
+    network_mode: service:db
+    command: sleep infinity
+  java:
+    image: mcr.microsoft.com/devcontainers/java

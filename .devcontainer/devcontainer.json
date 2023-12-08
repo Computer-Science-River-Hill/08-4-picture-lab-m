@@ -1,9 +1,13 @@
 {
-	"build": {
+	//"build": {
         	// Path is relative to the devcontainer.json file.
-        	"dockerfile": "Dockerfile"
-    	},
+        	//"dockerfile": "Dockerfile"
+
+    //},
 	"name": "McKibben - Default Graphical",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "desktop",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 		  "version": "none",
