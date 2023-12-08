@@ -1,6 +1,6 @@
 COPY fluxbox/* /tmp/fluxbox/
 COPY *.sh /tmp/scripts/
-RUN bash /tmp/scripts/install.sh \
+RUN bash /tmp/scripts/install2.sh \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/scripts/ /tmp/fluxbox/ \
     && git config --global codespaces-theme.hide-status 1
     
