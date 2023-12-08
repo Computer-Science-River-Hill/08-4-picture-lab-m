@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 COPY fluxbox/* /tmp/fluxbox/
 COPY *.sh /tmp/scripts/
 RUN bash /tmp/scripts/install.sh \
