@@ -1,5 +1,8 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"build": {
+        	// Path is relative to the devcontainer.json file.
+        	"dockerfile": "Dockerfile"
+    	}
 	"name": "McKibben - Default Graphical",
 	"containerEnv": {
 		"DISPLAY": ":1", // Allow the Dev Containers extension to set DISPLAY, post-create.sh will add it back in ~/.bashrc and ~/.zshrc if not set.
