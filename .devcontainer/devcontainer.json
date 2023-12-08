@@ -2,7 +2,7 @@
 	"build": {
         //Path is relative to the devcontainer.json file.
         "dockerfile": "Dockerfile"
-	}
+	},
 	"name": "McKibben - Default Graphical",
 	//"dockerComposeFile": "docker-compose.yml",
 	//"service": "desktop",
