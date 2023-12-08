@@ -4,7 +4,13 @@
 		"ghcr.io/devcontainers/features/desktop-lite:1": {}
 	},
 	"containerEnv": {
-		"DISPLAY": ":1" // Allow the Dev Containers extension to set DISPLAY, post-create.sh will add it back in ~/.bashrc and ~/.zshrc if not set.
+		"DISPLAY": ":1", // Allow the Dev Containers extension to set DISPLAY, post-create.sh will add it back in ~/.bashrc and ~/.zshrc if not set.
+		"VNC_RESOLUTION": "1440x768x24",
+		"VNC_DPI" : "96",
+		"VNC_PORT" : "5901",
+		"NOVNC_PORT":"6080",
+		"LANG": "en_US.UTF-8",
+		"LANGUAGE": "en_US.UTF-8"
 	},
 	"overrideCommand": false,
 	"privileged": true,
