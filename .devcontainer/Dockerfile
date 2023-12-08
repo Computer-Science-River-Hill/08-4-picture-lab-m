@@ -1,3 +1,4 @@
+FROM mcr.microsoft.com/devcontainers/base:ubuntu
 COPY fluxbox/* /tmp/fluxbox/
 COPY *.sh /tmp/scripts/
 RUN bash /tmp/scripts/install.sh \
