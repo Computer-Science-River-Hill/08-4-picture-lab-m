@@ -4,6 +4,12 @@
         	"dockerfile": "Dockerfile"
     	},
 	"name": "McKibben - Default Graphical",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+		  "version": "none",
+		  "installMaven": "false",
+		  "installGradle": "true"
+	},
 	"containerEnv": {
 		"DISPLAY": ":1", // Allow the Dev Containers extension to set DISPLAY, post-create.sh will add it back in ~/.bashrc and ~/.zshrc if not set.
 		"VNC_RESOLUTION": "1440x768x24",
