@@ -290,7 +290,7 @@ LOG=/tmp/container-init.log
 
 export DBUS_SESSION_BUS_ADDRESS="${DBUS_SESSION_BUS_ADDRESS:-"autolaunch:"}"
 export DISPLAY="${DISPLAY:-:1}"
-export VNC_RESOLUTION="${VNC_RESOLUTION:-1440x768x16}" 
+export VNC_RESOLUTION="${VNC_RESOLUTION:-1440x768x24}" 
 export LANG="${LANG:-"en_US.UTF-8"}"
 export LANGUAGE="${LANGUAGE:-"en_US.UTF-8"}"
 
@@ -360,7 +360,7 @@ sudoIf rm -rf /tmp/.X11-unix /tmp/.X*-lock
 mkdir -p /tmp/.X11-unix
 sudoIf chmod 1777 /tmp/.X11-unix
 sudoIf chown root:\${group_name} /tmp/.X11-unix
-if [ "\$(echo "\${VNC_RESOLUTION}" | tr -cd 'x' | wc -c)" = "1" ]; then VNC_RESOLUTION=\${VNC_RESOLUTION}x16; fi
+if [ "\$(echo "\${VNC_RESOLUTION}" | tr -cd 'x' | wc -c)" = "1" ]; then VNC_RESOLUTION=\${VNC_RESOLUTION}x24; fi
 screen_geometry="\${VNC_RESOLUTION%*x*}"
 screen_depth="\${VNC_RESOLUTION##*x}"
 startInBackgroundIfNotRunning "Xtigervnc" sudoUserIf "tigervncserver \${DISPLAY} -geometry \${screen_geometry} -depth \${screen_depth} -rfbport ${VNC_PORT} -dpi \${VNC_DPI:-96} -localhost -desktop fluxbox -fg -passwd /usr/local/etc/vscode-dev-containers/vnc-passwd"
