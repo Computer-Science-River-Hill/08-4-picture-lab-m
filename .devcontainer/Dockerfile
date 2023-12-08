@@ -12,6 +12,5 @@ ENV DBUS_SESSION_BUS_ADDRESS="autolaunch:" \
     DISPLAY=":1" \
     LANG="en_US.UTF-8" \
     LANGUAGE="en_US.UTF-8"
-COPY desktop-init.sh /usr/local/share/
 ENTRYPOINT ["/usr/local/share/desktop-init.sh"]
 CMD ["sleep", "infinity"]
