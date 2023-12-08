@@ -14,7 +14,7 @@
 	},
 	"overrideCommand": false,
 	"privileged": true,
-	"postCreateCommand": "bash postCreateCommand.sh",
+	"postCreateCommand": "sudo bash postCreateCommand.sh",
 	"customizations": {
 		"vscode": {
 			"settings": {
