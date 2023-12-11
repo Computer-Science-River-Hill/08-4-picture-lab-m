@@ -1,20 +1,14 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
+USER root
+ENV JAVA_HOME /usr/lib/jvm/msopenjdk-current
+ENV PATH "${JAVA_HOME}/bin:${PATH}"
+# Default to UTF-8 file.encoding
+ENV LANG en_US.UTF-8
 ARG TARGET_JAVA_VERSION=21
 COPY *.sh /tmp/scripts/
 RUN bash /tmp/scripts/install.sh \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/scripts/ /tmp/fluxbox/ \
     && git config --global codespaces-theme.hide-status 1
-
- 
-
-
-
-USER root
-ARG TARGET_JAVA_VERSION
-ENV JAVA_HOME /usr/lib/jvm/msopenjdk-current
-ENV PATH "${JAVA_HOME}/bin:${PATH}"
-# Default to UTF-8 file.encoding
-ENV LANG en_US.UTF-8
 
 # Install Microsoft OpenJDK
 RUN arch="$(dpkg --print-architecture)" \
