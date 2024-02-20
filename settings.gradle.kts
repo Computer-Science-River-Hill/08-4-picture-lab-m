@@ -1,2 +1,2 @@
-rootProject.name = "PictureLab"
+rootProject.name = "SampleJava"
 

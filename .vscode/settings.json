@@ -1,0 +1,20 @@
+{
+    "redhat.telemetry.enabled" : false,
+    "java.server.launchMode" : "Standard",
+    "files.exclude": {
+        ".*": true,
+        "build.gradle.kts": true,
+        "gradlew": true,
+        "gradlew.bat": true,
+        "settings.gradle.kts":true,
+        ".vscode":true,
+		"build-SNAPSHOT.gradle":true,
+		"build.gradle":true,
+		"settings.gradle":true,
+        "gradle":true
+    },
+    "cSpell.words": [
+        "devcontainers",
+        "vscjava"
+    ]
+}
